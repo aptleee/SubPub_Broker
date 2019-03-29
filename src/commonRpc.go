@@ -1,4 +1,4 @@
-package SubPub_Broker
+package src
 
 import (
 	"fmt"
