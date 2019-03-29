@@ -13,9 +13,6 @@ type subscriberRegistry struct {
 	consumers []string // registry for subscribers
 }
 
-type TtoS map[string][]string // topics to subscriber map
-
-
 
 type brokerContext struct {
 	pub publisherRegistry
@@ -29,7 +26,8 @@ type broker struct {
 	context brokerContext
 
 	addr string // rpc address
-	topics map[string][]string
+	topics map[string][]string // topics to fileName map
+	TtoS map[string][]string // topics to subscriber map
 	shutdown chan struct{}
 }
 
